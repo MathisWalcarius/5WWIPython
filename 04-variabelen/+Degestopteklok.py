@@ -15,10 +15,14 @@ vertrekmin4 = int(input(' '))
 
 #berekening
 
-rittijd = ((vertrekuur4 - vertrekuur1) * 60 + ( vertrekmin4 - vertrekmin1)) - ((vertrekuur3 - vertrekuur2) * 60 + ( vertrekmin3 - vertrekmin2)) / 2
-correctetijdmin = rittijd % 60 + vertrekmin3
-correctetijduur = rittijd // 60 + vertrekuur3
+rittijd = (((vertrekuur4 - vertrekuur1) * 60 + ( vertrekmin4 - vertrekmin1)) - ((vertrekuur3 - vertrekuur2) * 60 + ( vertrekmin3 - vertrekmin2))) / 2
+bijnacorrectetijdmin = rittijd % 60 + vertrekmin3
+extrauur = bijnacorrectetijdmin // 60
+correctetijduur = rittijd // 60 + vertrekuur3 + extrauur
+correctetijdmin = bijnacorrectetijdmin % 60
+
 #uitvoer
 
-print(correctetijduur)
-print(correctetijdmin)
+print(int(correctetijduur))
+print(int(correctetijdmin))
+print('rittijd', rittijd)
