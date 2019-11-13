@@ -1,6 +1,8 @@
 
+a=24
 
-uitvoer = '{0:d} + {1:^9.2f} = {0:d}'
+uitvoer = '{:>10.4f}'
+#uitvoer = '{0:>7d}'
+print(uitvoer.format(a))
 
-print(uitvoer.format(2, pow(2, 3)))
-
+print('{:5d} en {:.2f}'.format(3, 3) )
