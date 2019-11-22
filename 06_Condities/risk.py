@@ -1,22 +1,28 @@
-a1 = input(int('1ste dobbelsteen: '))
-a2 = input(int('2de dobbelsteen: '))
-a3 = input(int('3de dobbelsteen: '))
+a1 = int(input('1ste dobbelsteen: '))
+a2 = int(input('2de dobbelsteen: '))
+a3 = int(input('3de dobbelsteen: '))
 
-v1 = input(int('1ste dobbelsteen: '))
-v2 = input(int('2de dobbelsteen: '))
+v1 = int(input('1ste dobbelsteen: '))
+v2 = int(input('2de dobbelsteen: '))
 
 #berekening
+legers_a = 2
+legers_v = 2
+tweede_a = (a1 + a2 + a3 ) - min(a1, a2, a3 ) - max(a1, a2, a3 )
 
-if v1 > v2:
-    grootv = v1
-    kleinv = v2
+if max(v1, v2) >= max(a1,a2,a3):
+    legers_v -= 1
 else:
-    grootv = v2
-    kleinv = v1
+    legers_a -= 1
 
+if min(v2,v1) >= tweede_a:
+    legers_v -= 1
+else:
+    legers_a -= 1
 
-if a1 > a2 and a2 > a3:
-    groota = a1
-    middela = a2
-elif a1 > a2 and a2 < a3:
+if legers_v == 1:
+    print('aanvaller verliest 1 leger, verdediger verliest 1 leger')
+else:
+    print('aanvaller verliest', legers_a,' legers, verdediger verliest', legers_v,'legers')
 
+print(tweede_a)

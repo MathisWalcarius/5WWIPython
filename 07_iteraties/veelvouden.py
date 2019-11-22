@@ -1,9 +1,9 @@
-#getal = int(input('getal : '))
+getal = int(input('getal : '))
 
-#som = ''
-#for veelvoud in range(getal, 100, getal ):
-#    som += veelvoud
+som = 0
+
+for veelvoud in range(getal, 101, getal ):
+    som += veelvoud
 
 
-uitvoer = '{ :f}'
-print(uitvoer.format(3.00))
+print(som)
