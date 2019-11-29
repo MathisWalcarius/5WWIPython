@@ -12,7 +12,9 @@ for i in range(aantal-1):
 
 gemiddelde = som / aantal
 
-print(gemiddelde, grootste)
+#uitvoer
+
+print('Het grootste getal is {1:d} en het gemiddelde is {0:.2f}'.format(gemiddelde, grootste))
 
 
 
