@@ -1,8 +1,14 @@
+n = int(input('getal: '))
+cijfers, ontbreken = '', ''
 
-a=24
+for i in range(1, 11):
+    cijfers += str(n * i)
 
-uitvoer = '{:>10.4f}'
-#uitvoer = '{0:>7d}'
-print(uitvoer.format(a))
+for c in '0123456789':
+    if c not in cijfers:
+        ontbreken += c
 
-print('{:5d} en {:.2f}'.format(3, 3) )
+if len(ontbreken) == 0:
+    print('Tafel van ' + str(n) + ' is een mooie tafel')
+else:
+    print('In de tafel van ' + str(n) + ' ontbre(e)k(t)en ' + ontbreken)
