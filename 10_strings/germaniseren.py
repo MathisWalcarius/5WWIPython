@@ -6,9 +6,10 @@ def germaniseer(zin):
     for letter in zin:
 
         if a ==  1:
-            nieuwezin = zin[:mummer] + i.upper() + zin[i:]
+            nieuwezin = nieuwezin[:nummer] + letter.upper()
             a = 0
-
+        else:
+            nieuwezin += letter
         if letter == ' ':
             a = 1
         nummer += 1
